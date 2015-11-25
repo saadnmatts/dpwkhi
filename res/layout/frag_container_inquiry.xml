@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <TextView
+        android:id="@+id/heading_title"
+        android:background="@drawable/heads_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_margin"
+        android:padding="@dimen/general_margin"      
+        android:textAllCaps="true"
+        android:textColor="@color/icons"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="@dimen/typo_body" />    
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/divider"
+        android:dividerPadding="@dimen/general_margin" >
+
+        <EditText
+            android:id="@+id/search_container_no"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:hint="@string/container_search_hint"
+            android:textColor="@color/icons"
+            android:textSize="@dimen/typo_body"
+            android:layout_weight="3"
+            android:ems="10" >
+        </EditText>
+
+        <Button
+            android:id="@+id/btn_search"
+            android:background="@color/light_blue"            
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:text="@string/text_find"
+            android:textColor="@color/icons"
+            android:textSize="@dimen/typo_button"
+            android:textStyle="bold" />
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_margin"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/icons"
+            android:text="@string/text_find_result"
+            android:textSize="@dimen/typo_subheading" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listViewContainerInquiry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp" >
+    </ListView>
+      
+</LinearLayout>

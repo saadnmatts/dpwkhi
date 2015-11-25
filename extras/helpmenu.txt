@@ -1,0 +1,45 @@
+	public Integer[] helpIcons = {
+			R.drawable.ic_bill,
+			R.drawable.ic_hold,R.drawable.ic_houses			
+	};
+	
+		helpOptions = getResources().getStringArray(R.array.options_help);
+		helpGridView = (GridView) findViewById(R.id.grids_help);
+		helpGridAdapter = new MenuGridAdapter(this, helpIcons, helpOptions);
+		helpGridView.setAdapter(helpGridAdapter);
+		helpGridView.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view, int position,
+					long id) {				
+			}
+		});
+
+    <TextView
+        android:id="@+id/head_help"
+        android:background="@color/accent_yellow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_margin"          
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/grids_service"
+        android:text="@string/text_help"
+        android:textAllCaps="true"
+        android:textColor="@color/icons"
+        android:gravity="center"
+        android:textSize="@dimen/typo_subheading" />
+    
+    <GridView
+        android:id="@+id/grids_help"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/head_help"
+        android:numColumns="3"        
+        >
+    </GridView>   
+    
+    <string-array name="options_help">
+        <item>Inquiry</item>
+        <item>Service Request</item>
+        <item>About Kiosk</item>
+    </string-array>    		

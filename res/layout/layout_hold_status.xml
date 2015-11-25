@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/dark_blue"
+    android:padding="@dimen/general_margin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    
+    <TextView
+        android:id="@+id/hs_eq_nbr_val"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="@dimen/typo_subheading"
+        android:textAllCaps="true"
+        android:textColor="@color/icons"
+        />     
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left" >
+        <TextView
+            android:id="@+id/hs_held_reason"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:textSize="@dimen/typo_caption"
+            android:textColor="@color/white"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/hs_held_reason_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/typo_caption"
+            android:textColor="@color/white"
+            android:text="TextView" />
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left" >
+        <TextView
+            android:id="@+id/hs_hold_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:textSize="@dimen/typo_caption"
+            android:textColor="@color/white"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/hs_hold_date_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/typo_caption"
+            android:textColor="@color/white"
+            android:text="TextView" />
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left" >
+        <TextView
+            android:id="@+id/hs_release_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:textSize="@dimen/typo_caption"
+            android:textColor="@color/white"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/hs_release_date_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/typo_caption"
+            android:textColor="@color/white"
+            android:text="TextView" />
+    </RelativeLayout>    
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left" >
+        <TextView
+            android:id="@+id/hs_doc_req"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:textSize="@dimen/typo_caption"
+            android:textColor="@color/white"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/hs_doc_req_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/typo_caption"
+            android:textColor="@color/white"
+            android:text="TextView" />
+    </RelativeLayout>     
+        
+</LinearLayout>

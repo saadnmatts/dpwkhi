@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">DP WORLD Karachi</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="application_name">DP WORLD Karachi</string>
+    <string name="text_main_menu">Main Menu</string>
+    <string name="text_inquiry">Inquiry</string>
+    <string name="text_services_req">Services Requests</string>
+    <string name="text_help">Help</string>
+
+    <!-- Array of Strings for Inquiry Grids -->
+    <string-array name="options_inquiry">
+        <item>Container Inquiry</item>
+        <item>Release Status</item>
+        <item>Billing Invoice</item>
+        <item>Hold Status</item>
+        <item>Vessel Schedule</item>        
+        <item>Reefer Inquiry</item>
+    </string-array>
+    <string-array name="options_services">
+        <item>Weightment</item>
+        <item>Scan</item>
+        <item>Seal Verification</item>
+        <item>Import Examination</item>
+        <item>Fumigation</item>
+        <item>Sampling</item>        
+        <item>One Custom Examination</item>
+    </string-array>
+    <string-array name="options_help">
+        <item>Inquiry</item>
+        <item>Service Request</item>
+        <item>About Kiosk</item>
+    </string-array>
+    <string-array name="sample_ports_kind">
+        <item>Import</item>
+        <item>Export</item>
+    </string-array>
+    <string-array name="weighment">
+        <item name="WEIGHMENT">On Customer Truck</item>
+        <item name="WEIGH">On QICT Truck</item>
+    </string-array>
+    <string-array name="scan">
+        <item name="SCAN_CT">Scan on Customer Track</item>
+        <item name="SCAN">Scan on QICT Truck</item>
+    </string-array>
+    <string-array name="seal_verification">
+        <item name="SEALVERIFY">Grounded For Seal Verification</item>
+    </string-array>
+    <string-array name="fumigation">
+        <item name="FUMIGATE">Without seal Break</item>
+        <item name="SEAL_BREAK">With Seal Break</item>
+    </string-array>
+    <string-array name="sampling">
+        <item name="HOTWOK_EXM">Hot Sampling</item>
+        <item name="SAMPLE">PPRO sampling</item>
+    </string-array>
+    <string-array name="import_anf_examination ">
+        <item name="ANFEXAM">Import ANF Examination</item>
+    </string-array>
+    <string-array name="on_custom_examination">
+        <item name="five">5% EXAMINATION (Seal Break Partial Devanning Revaning)</item>
+        <item name="hundred">100% EXAMINATION (Full Devan Revan)</item>
+    </string-array>
+    
+    <string-array name="sample_import_containers">
+        <item>CJHY880</item>
+        <item>BGHH850</item>
+        <item>IUHY580</item>
+        <item>KJMY886</item>
+        <item>CJKY885</item>
+    </string-array>
+    <string-array name="sample_export_containers">
+        <item>QWER456</item>
+        <item>ASDF767</item>
+        <item>ZXCV890</item>
+        <item>POUI432</item>
+        <item>LKJH269</item>
+    </string-array>
+
+    <string name="title_activity_post_menu">Details</string>
+    <string name="container_search_hint">Enter Container Number</string>
+    <string name="text_find_result">Search Result</string>
+    <string name="title_activity_splash_screen">DP WORLD Karachi</string>
+    <string name="text_find">SEARCH</string>
+    <string name="filter">Filter</string>
+    <string name="load_data">Load Data</string>
+    <string name="choose_service">Choose Service</string>
+    <string name="search_filter">Filter Your Search</string>
+    <string name="text_cancel">Cancel</string>
+    <string name="text_yes">Yes</string>
+    <string name="text_no">No</string>
+    <string name="text_confirm">Confirm</string>
+    <string name="text_okay">Okay</string>
+    <string name="text_password">Password</string>
+    <string name="text_warning">Warning</string>
+    <string name="text_dismiss">Dismiss</string>
+    <string name="text_agent">Agent Username</string>
+    <string name="text_authenticate">Authenticate</string>
+    <string name="text_billno">BL / Container No.</string>
+    <string name="text_valid">Validity</string>
+    <string name="text_send">Send</string>
+    <string name="text_pick_date">Pick Date</string>
+    <string name="text_service_success">Your request of service has been approved.</string>
+    <string name="text_service_fail">Approval Problem. Try Again</string>
+    <string name="text_service_confirm">Are You Sure You Want to Submit</string>
+    <string name="text_netcon_error">Your Device is not connected to Internet, Re check your Connection.</string>
+    <string name="text_pickdate">Delivery Date</string>
+    <string name="text_key_crypt"></string>
+
+</resources>

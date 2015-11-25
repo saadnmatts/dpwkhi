@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/dark_blue"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/general_margin">
+
+    <TextView
+        android:id="@+id/textViewKey"
+        android:layout_width="wrap_content"
+        android:maxWidth="180dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:textSize="@dimen/typo_caption"
+        android:textColor="@color/icons"
+        android:textAllCaps="true"        
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textViewValue"
+        android:layout_width="wrap_content"
+        android:maxWidth="180dp"
+        android:minLines="1"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:textSize="@dimen/typo_caption"
+        android:textColor="@color/icons"
+        android:textAllCaps="true"
+        android:gravity="right"   
+        android:text="TextView" />
+
+</RelativeLayout>

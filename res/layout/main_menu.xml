@@ -1,0 +1,63 @@
+<RelativeLayout  
+	xmlns:android="http://schemas.android.com/apk/res/android"
+   	xmlns:tools="http://schemas.android.com/tools"      
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_margin"
+    android:paddingRight="@dimen/activity_margin"
+    android:background="@drawable/ab"
+    tools:context=".MainMenu" >
+
+    <TextView
+        android:id="@+id/head_inquiry"
+        android:background="@drawable/heads_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/general_margin"
+        android:layout_marginBottom="@dimen/general_margin"
+        android:padding="@dimen/general_margin"      
+        android:layout_alignParentLeft="true"
+        android:text="@string/text_inquiry"
+        android:textAllCaps="true"
+        android:textColor="@color/icons"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="@dimen/typo_body" />
+
+    <GridView
+        android:id="@+id/grids_inquiry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/head_inquiry"
+        android:verticalSpacing="24dp"
+        android:numColumns="4" >
+    </GridView>
+    
+    <TextView
+        android:id="@+id/head_service"
+        android:background="@drawable/heads_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"   
+        android:layout_marginTop="@dimen/general_margin"
+        android:layout_marginBottom="@dimen/general_margin"       
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/grids_inquiry"
+        android:text="@string/text_services_req"
+        android:textAllCaps="true"
+        android:textColor="@color/icons"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="@dimen/typo_body" />
+
+    <GridView
+        android:id="@+id/grids_service"
+        android:layout_marginBottom="@dimen/general_margin"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_below="@+id/head_service"
+        android:verticalSpacing="12dp"
+        android:numColumns="4"        
+        >
+    </GridView>
+    
+</RelativeLayout>

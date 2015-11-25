@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/dark_blue"
+    android:padding="@dimen/general_margin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/v_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="@dimen/typo_subheading"
+        android:textColor="@color/white"
+        android:textAllCaps="true"
+        android:text="TextView" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left" >
+        <TextView
+            android:id="@+id/v_invoy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:textSize="@dimen/typo_caption"
+            android:textColor="@color/white"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/v_invoy_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/typo_caption"
+            android:textColor="@color/white"
+            android:text="TextView" />
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left" >
+        <TextView
+            android:id="@+id/v_vir_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:textSize="@dimen/typo_caption"
+            android:textColor="@color/white"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/v_vir_no_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/typo_caption"
+            android:textColor="@color/white"
+            android:text="TextView" />
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left" >
+        <TextView
+            android:id="@+id/v_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:textSize="@dimen/typo_caption"
+            android:textColor="@color/white"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/v_service_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/typo_caption"
+            android:textColor="@color/white"
+            android:text="TextView" />
+    </RelativeLayout>    
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left" >
+        <TextView
+            android:id="@+id/v_eta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:textSize="@dimen/typo_caption"
+            android:textColor="@color/white"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/v_eta_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/typo_caption"
+            android:textColor="@color/white"
+            android:text="TextView" />
+    </RelativeLayout>     
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left" >
+        <TextView
+            android:id="@+id/v_etd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:textSize="@dimen/typo_caption"
+            android:textColor="@color/white"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/v_etd_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/typo_caption"
+            android:textColor="@color/white"
+            android:text="TextView" />
+    </RelativeLayout> 
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left" >
+        <TextView
+            android:id="@+id/v_ata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:textSize="@dimen/typo_caption"
+            android:textColor="@color/white"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/v_ata_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/typo_caption"
+            android:textColor="@color/white"
+            android:text="TextView" />
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left" >
+        <TextView
+            android:id="@+id/v_atd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:textSize="@dimen/typo_caption"
+            android:textColor="@color/white"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/v_atd_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/typo_caption"
+            android:textColor="@color/white"
+            android:text="TextView" />
+    </RelativeLayout>     
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left" >
+        <TextView
+            android:id="@+id/v_cut_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:textSize="@dimen/typo_caption"
+            android:textColor="@color/white"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/v_cut_off_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/typo_caption"
+            android:textColor="@color/white"
+            android:text="TextView" />
+    </RelativeLayout>     
+        
+</LinearLayout>

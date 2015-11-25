@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/grid_item_image"
+        android:layout_gravity="center"        
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="@dimen/general_margin"
+        android:contentDescription="@string/application_name"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/grid_item_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/general_margin"
+        android:layout_marginBottom="@dimen/general_margin"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textColor="@color/icons"
+        android:maxLines="2"
+        android:textSize="@dimen/typo_small" />
+
+</LinearLayout>
