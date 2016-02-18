@@ -27,6 +27,7 @@
         <item>Fumigation</item>
         <item>Sampling</item>        
         <item>One Custom Examination</item>
+        <item>Update Truck No</item>
     </string-array>
     <string-array name="options_help">
         <item>Inquiry</item>
@@ -108,5 +109,8 @@
     <string name="text_netcon_error">Your Device is not connected to Internet, Re check your Connection.</string>
     <string name="text_pickdate">Delivery Date</string>
     <string name="text_key_crypt"></string>
+    <string name="text_update">Update</string>
+    <string name="text_enter_truck_number" >Enter Truck Number</string>
+    <string name="text_wait">Kindly, Wait</string>
 
 </resources>

@@ -28,6 +28,6 @@
         android:textColor="@color/icons"
         android:textAllCaps="true"
         android:gravity="right"   
-        android:text="TextView" />
+        android:text="" />
 
 </RelativeLayout>

@@ -384,4 +384,101 @@ public class DPServices {
 		return response.toString();		
 	}
 	
+	public static String tipList(String agentid){
+		final String OPERATION = "TIP_List";
+		final String SOAP_ACTION = "http://tempuri.org/TIP_List";
+		SoapObject request = new SoapObject(WSDL_TARGET_NAMESPACE,OPERATION);
+		PropertyInfo pi;
+		
+	    pi=new PropertyInfo();
+	    pi.setName("Agent_ID");
+	    pi.setValue(agentid);
+	    pi.setType(String.class);
+	    request.addProperty(pi);		
+
+	    pi=new PropertyInfo();
+	    pi.setName("UserID");
+	    pi.setValue(DPHelper.MAIN_USERNAME);
+	    pi.setType(String.class);
+	    request.addProperty(pi);
+	    
+	    pi=new PropertyInfo();
+	    pi.setName("Password");
+	    pi.setValue(DPHelper.MAIN_PASSWORD);
+	    pi.setType(String.class);
+	    request.addProperty(pi);
+	    
+		SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(
+		SoapEnvelope.VER11);
+		envelope.dotNet = true;
+	
+		envelope.setOutputSoapObject(request);
+	
+		HttpTransportSE httpTransport = new HttpTransportSE(SOAP_ADDRESS);
+		Object response=null;
+		try{
+			httpTransport.call(SOAP_ACTION, envelope);
+			response = envelope.getResponse();
+		}
+		catch (Exception exception){
+			response="";
+		}
+		return response.toString();		    
+
+	}
+	
+	public static String updateTruck(String gKey, String containerNo, String truckNo){
+		final String OPERATION = "update_truck_no";
+		final String SOAP_ACTION = "http://tempuri.org/update_truck_no";
+		SoapObject request = new SoapObject(WSDL_TARGET_NAMESPACE,OPERATION);
+		PropertyInfo pi;
+		
+	    pi=new PropertyInfo();
+	    pi.setName("gkey");
+	    pi.setValue(gKey);
+	    pi.setType(Double.class);
+	    request.addProperty(pi);		
+
+	    pi=new PropertyInfo();
+	    pi.setName("ContainerNo");
+	    pi.setValue(containerNo);
+	    pi.setType(String.class);
+	    request.addProperty(pi);
+	    
+	    pi=new PropertyInfo();
+	    pi.setName("TruckNo");
+	    pi.setValue(truckNo);
+	    pi.setType(String.class);
+	    request.addProperty(pi);
+	    
+	    pi=new PropertyInfo();
+	    pi.setName("UserID");
+	    pi.setValue(DPHelper.MAIN_USERNAME);
+	    pi.setType(String.class);
+	    request.addProperty(pi);
+	    
+	    pi=new PropertyInfo();
+	    pi.setName("Password");
+	    pi.setValue(DPHelper.MAIN_PASSWORD);
+	    pi.setType(String.class);
+	    request.addProperty(pi);
+	    
+		SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(
+		SoapEnvelope.VER11);
+		envelope.dotNet = true;
+	
+		envelope.setOutputSoapObject(request);
+	
+		HttpTransportSE httpTransport = new HttpTransportSE(SOAP_ADDRESS);
+		Object response=null;
+		try{
+			httpTransport.call(SOAP_ACTION, envelope);
+			response = envelope.getResponse();
+		}
+		catch (Exception exception){
+			response="";
+		}
+		return response.toString();		    
+	}	
+	
 }

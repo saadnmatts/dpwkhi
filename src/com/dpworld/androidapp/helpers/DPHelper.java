@@ -26,6 +26,7 @@ public final class DPHelper {
 	
 	public static final String INTENT_EXTRA_TITLE = "activity_title";
 	public static final String INTENT_EXTRA_ICON = "activity_icon";
+	public static final String INTENT_EXTRA_CONTAINER_LIST = "container_list";
 	public static final String MAIN_USERNAME = "MATS";
 	public static final String MAIN_PASSWORD = "abc123";
 	

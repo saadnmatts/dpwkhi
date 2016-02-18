@@ -1,11 +1,16 @@
 package com.dpworld.androidapp;
 
+import java.util.ArrayList;
+
 import com.dpworld.androidapp.fragments.FragContainerHoldReefer;
 import com.dpworld.androidapp.fragments.FragContainerInquiry;
 import com.dpworld.androidapp.fragments.FragHoldStatus;
 import com.dpworld.androidapp.fragments.FragInvoiceInquiry;
+import com.dpworld.androidapp.fragments.FragTipList;
 import com.dpworld.androidapp.fragments.FragVesselSchedule;
+import com.dpworld.androidapp.helpers.ContainerList;
 import com.dpworld.androidapp.helpers.DPHelper;
+import com.dpworld.androidapp.models.ModelTip;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -50,6 +55,8 @@ public class PostMenu extends Activity {
 			billingInvoice();
 		}else if(title_name.equals("Hold Status")){
 			holdStatus();
+		}else if(title_name.equals("Tip List")){
+			tipList();
 		}
 		
 	}
@@ -76,6 +83,10 @@ public class PostMenu extends Activity {
 	
 	int getIconForAppBar(){
 		return incomingIntent.getIntExtra(DPHelper.INTENT_EXTRA_ICON,-1);
+	}
+	
+	String getContainerList(){
+		return incomingIntent.getStringExtra(DPHelper.INTENT_EXTRA_CONTAINER_LIST);
 	}
 	
 	@Override
@@ -126,6 +137,14 @@ public class PostMenu extends Activity {
 		FragmentManager manager = getFragmentManager();
 		manager.beginTransaction()
         .add(R.id.frame_post_menu, fragment).commit();			
+	}
+	
+	void tipList(){
+		FragTipList fragment = new FragTipList();
+		fragment.setArguments(extras);
+		FragmentManager manager = getFragmentManager();
+		manager.beginTransaction()
+        .add(R.id.frame_post_menu, fragment).commit();		
 	}
 
 }

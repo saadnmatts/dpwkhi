@@ -2,9 +2,13 @@ package com.dpworld.androidapp;
 
 import java.util.ArrayList;
 import com.dpworld.androidapp.adapters.MenuGridAdapter;
+import com.dpworld.androidapp.helpers.ContainerList;
 import com.dpworld.androidapp.helpers.DPHelper;
 import com.dpworld.androidapp.helpers.DPServices;
+import com.dpworld.androidapp.models.ModelTip;
 import com.dpworld.androidapp.showparsers.ShowParseAgentAuth;
+import com.dpworld.androidapp.showparsers.ShowParseTipList;
+
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.app.Activity;
@@ -22,6 +26,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 
@@ -54,7 +59,7 @@ public class MainMenu extends Activity {
 			R.drawable.ic_weighment, R.drawable.ic_scan,
 			R.drawable.ic_seal,R.drawable.ic_import,
 			R.drawable.ic_fumigation,R.drawable.ic_sampling,
-			R.drawable.ic_custom
+			R.drawable.ic_custom, R.drawable.ic_tip
 	};
 	
 	@Override
@@ -98,7 +103,12 @@ public class MainMenu extends Activity {
 				if(callAgentId().equals("")){
 					authenticatePassDialog();
 				}else{
-					createDialog(serviceOptions[position]);
+					if(serviceOptions[position].toString().equals("Update Truck No")){
+						DoTipSync startTask = new DoTipSync();
+						startTask.execute();						
+					}else{
+						createDialog(serviceOptions[position]);
+					}
 				}				
 			}
 		});
@@ -117,6 +127,11 @@ public class MainMenu extends Activity {
 		gridItemIntent.putExtra(DPHelper.INTENT_EXTRA_TITLE, sendingTitle);
 		gridItemIntent.putExtra(DPHelper.INTENT_EXTRA_ICON, sendingIcon);
 		startActivity(gridItemIntent);		
+	}
+	
+	void postMenu(String sendingTitle){
+		gridItemIntent.putExtra(DPHelper.INTENT_EXTRA_TITLE, sendingTitle);
+		startActivity(gridItemIntent);
 	}
 	
 	void networkNotifyDialog(){
@@ -318,6 +333,79 @@ public class MainMenu extends Activity {
 			saveUserInfo(agentid, cardid);
 			DPHelper.quickToast(getBaseContext(), "Authenticated.");
 		}			
+	}
+	
+	void tipListUpdateTruck(final ArrayList<ModelTip> jTipList, int position){
+		String alertTitle = "Update Truck Number";
+		AlertDialog.Builder builder = new AlertDialog.Builder(MainMenu.this);
+	    final View view = LayoutInflater.from(getApplicationContext()).inflate(R.layout.layout_updatetruck, null);
+	    builder.setView(view);
+		builder.setTitle(alertTitle);
+		builder.setPositiveButton(R.string.text_update, new OnClickListener() {
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				EditText etTruckNo = (EditText) findViewById(R.id.et_update_truck);
+				String truckNo  = etTruckNo.getText().toString();
+				
+			}
+		});
+		builder.setNegativeButton(R.string.text_cancel, null);
+		AlertDialog dialog = builder.create();
+		dialog.show();			
+	}
+	
+	void tipListDialog(final ArrayList<ModelTip> jTipList){
+		final ArrayList<String> itemsList = new ArrayList<String>();
+		for (int i = 0; i < jTipList.size(); i++){
+			itemsList.add(jTipList.get(i).getCTR_NBR().toString());
+		}
+		
+		String[] items = new String[jTipList.size()];
+		itemsList.toArray(items);
+		
+		String alertTitle = "Container Numbers";
+		AlertDialog.Builder builder = new AlertDialog.Builder(MainMenu.this);
+		builder.setTitle(alertTitle);
+		builder.setItems(items, new OnClickListener() {
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				tipListUpdateTruck(jTipList,which);
+			}
+		});
+		builder.setNegativeButton(R.string.text_cancel, null);		
+		AlertDialog dialog = builder.create();
+		dialog.show();		
+	}
+	
+	private class DoTipSync extends AsyncTask<String, String, String>{
+
+		@Override
+		protected String doInBackground(String... params) {
+			Log.i(DPHelper.LOGTAG, "In Background.");
+			String result = "";
+			try {
+				String tipList = DPServices.tipList(callAgentId());
+				result = tipList;
+			} catch (Exception e) {
+			}			
+			return result;
+		}
+		
+		@Override
+		protected void onPostExecute(String result) {
+			if(result.equals("[]") || (result.equals(""))){
+				DPHelper.longToast(getApplicationContext(), DPHelper.SERVICE_NOT_FOUND_ERROR);
+				serviceGridView.setEnabled(true);
+			}else{
+				ShowParseTipList tl = new ShowParseTipList(getBaseContext(), result);
+				ArrayList<ModelTip> jTipList = new ArrayList<ModelTip>();
+				jTipList = tl.onDataLoadedTipList();
+				ContainerList.getInstance().set(jTipList);
+				serviceGridView.setEnabled(true);
+				postMenu("Tip List");
+			}			
+		}
+		
 	}	
 	
 	private class ServiceSync extends AsyncTask<String, String, String>{
